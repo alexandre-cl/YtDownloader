@@ -35,5 +35,8 @@ def baseControllerMain():
     else:
         t = yt.streams.filter(only_audio=True)
         print("Baixando...")
-        t[0].download(pathFile)
+        out_file = t[0].download(pathFile)
+        base, ext = os.path.splitext(out_file)
+        new_file = base + '.mp3'
+        os.rename(out_file, new_file)
         print("Download completo!!")
