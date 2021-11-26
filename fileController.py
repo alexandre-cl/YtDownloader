@@ -7,7 +7,6 @@ def fileChecker(dirName):
         return False
 
 def fileCreator(dirName):
-    print("~/Desktop/{0}".format(dirName))
     os.mkdir(os.path.expanduser("~/Desktop/YoutubeDumper/{0}".format(dirName)))
 
 def rootChecker():

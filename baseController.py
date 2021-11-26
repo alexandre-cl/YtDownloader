@@ -1,6 +1,5 @@
 from pytube import YouTube
 import fileController
-
 import os
 
 def baseControllerMain():
@@ -24,8 +23,6 @@ def baseControllerMain():
 
     if(fileExist == False):
         fileController.fileCreator(dirNames.get(dirNameController))
-    else:
-        print("File " + dirNames.get(dirNameController) + " already exist in the system.")
 
     link = input("Link:  ")
     yt = YouTube(link)
