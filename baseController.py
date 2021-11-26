@@ -27,7 +27,7 @@ def baseControllerMain():
     link = input("Link:  ")
     yt = YouTube(link)
     pathFile = os.path.expanduser("~/Desktop/YoutubeDumper/{0}".format(dirNames.get(dirNameController)))
-    if(type == '1'):
+    if(inputedType == '1'):
         ys = yt.streams.get_highest_resolution()
         print("Baixando...")
         ys.download(pathFile)
